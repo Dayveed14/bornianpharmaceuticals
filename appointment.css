@@ -1,0 +1,203 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header__nav {
+    display: flex;
+}
+
+.header__nav-item {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.header__nav-item:hover {
+    text-decoration: underline;
+}
+
+.header__nav-item--logout {
+    margin-left: auto;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 2rem;
+}
+
+.main__container {
+    flex-basis: 60%;
+    padding-right: 2rem;
+}
+
+.form {
+    background-color: #f2f2f2;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.form__group {
+    margin-bottom: 1.5rem;
+}
+
+.form__label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form__select,
+.form__input {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    width: 100%;
+}
+
+.form__select {
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml,<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M7 12L16 21 25 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 0.5rem) center;
+}
+
+.form__select::-ms-expand {
+    display: none;
+}
+
+.form__btn {
+    background-color: #2C3E50;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.form__btn:hover {
+    background-color: #34495E;
+}
+
+
+
+.physicians__title {
+    font-size: 1.5rem;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.physicians__table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.physicians__table th,
+.physicians__table td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.physicians__table th,
+.receipt_row {
+    background-color: #2C3E50;
+    color: #fff;
+}
+
+.physicians__table td {
+    border-bottom: 1px solid #ccc;
+}
+
+.physicians__btn {
+    background-color: #2C3E50;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.physicians__btn2 {
+    background-color: #fff;
+    color: #2C3E50;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.physicians__btn:hover {
+    background-color: #34495E;
+}
+
+.physicians__btn2:hover {
+    background-color: grey;
+}
+
+.receipt-section h3,
+.appointments-section h3 {
+    padding: 20px 0px;
+}
+
+.receipt-details p {
+    padding: 0px 0px 10px 0px;
+}
+
+
+.diagnosis {
+    flex-basis: 45%;
+}
+
+.diagnosis h2,
+.prescription h2 {
+    margin-top: 0;
+}
+
+.prescription {
+    flex-basis: 45%;
+}
+
+
+@media (max-width:600px) {
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .physicians {
+        flex-basis: 40%;
+    }
+
+    .header__title {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+}

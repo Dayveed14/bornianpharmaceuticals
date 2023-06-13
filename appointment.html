@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking Page</title>
+    <link rel="stylesheet" href="appointment.css">
+    <link href="datatables.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__title">Book Appointment</h1>
+            <nav class="header__nav">
+                <a href="appointment.html" class="header__nav-item">Home</a>
+                <a href="diagnosis.html" class="header__nav-item">Diagnosis</a>
+                <a href="#" class="header__nav-item header__nav-item--logout" onclick="logout()">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__container">
+            <form class="form">
+                <div class="form__group">
+                    <label for="physicians" class="form__label">Physicians:</label>
+                    <select id="physc" name="physicians" class="form__select" required>
+                        <option value="" disabled selected>Select physician</option>
+                        <option value="John Doe">John Doe</option>
+                        <option value="Jane Grey">Jane Grey</option>
+                        <option value="Jonathan Moss">Jonathan Moss</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="specialization" class="form__label">Specialization:</label>
+                    <select id="spec" name="specialization" class="form__select" required>
+                        <option value="" disabled selected>Select specialization</option>
+                        <option value="Physiology">Physiology</option>
+                        <option value="Family Health">Family Health</option>
+                        <option value="Pediatrics">Peadiatry</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="date" class="form__label">Date:</label>
+                    <input type="date" id="avail" name="date" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <button type="button" class="btn form__btn" onclick="checkAvailability()">Check
+                        Availability</button>
+                </div>
+                <p id="result" class="result"></p>
+            </form>
+            <section class="physicians">
+                <h2 class="physicians__title">Available Physicians</h2>
+                <table class="physicians__table" id="myTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Specialization</th>
+                            <th>Availability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+            <section class="physicians">
+                <h2 class="physicians__title">Booked Physicians</h2>
+                <table class="physicians__table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Specialization</th>
+                            <th>Availability</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="doctor"></td>
+                            <td id="specialization"></td>
+                            <td id="date"></td>
+                            <td><button class="btn physicians__btn" onclick="appointmentBooked()">Book
+                                    Appointment</button></td>
+                        </tr>
+                        <tr>
+                            <td class="receipt_row">
+                                <div class="receipt-section">
+                                    <h3>Receipt</h3>
+                                    <div class="receipt-details">
+                                        <p>Physician Name: <span id="receiptPhysician"></span></p>
+                                        <p>Specialization: <span id="receiptSpecialization"></span></p>
+                                        <p>Date: <span id="receiptDate"></span></p>
+                                        <p>Client Name: <span id="receiptClient"></span></p>
+                                    </div>
+                                    <button class="btn physicians__btn2" onclick="printReceipt()">Print Receipt</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        </div>
+    </main>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="datatables.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

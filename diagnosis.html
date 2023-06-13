@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emergency Diagnosis and Drug Prescription Page</title>
+    <link rel="stylesheet" href="diagnosis.css">
+    <link rel="stylesheet" href="appointment.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header2__title">Emergency Diagnosis and Drug Prescription Page</h1>
+            <nav class="header__nav">
+                <a href="appointment.html" class="header__nav-item">Home</a>
+                <a href="diagnosis.html" class="header__nav-item">Diagnosis</a>
+                <a href="#" class="header__nav-item header__nav-item--logout" onclick="logout()">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h2>Input Symptoms</h2>
+        <div class="form">
+            <div class="form__group">
+                <label for="symptoms" class="form__label">Symptoms:</label>
+                <textarea id="symptoms" name="symptoms" class="form__input" required></textarea>
+                <br>
+                <div class="form__group"><button class="btn form__btn" onclick="suggestDiagnosis()">Suggest
+                        Diagnosis</button></div>
+
+            </div>
+        </div>
+        <div class="diagnosis">
+            <h2>Possible Diagnoses:</h2>
+            <p id="diagnosis"></p>
+        </div>
+        <div class="prescription">
+            <h2>Prescribed Drugs:</h2>
+            <p id="prescription"></p>
+            <div class="form__group">
+                <button type="button" class="btn form__btn" onclick="">Purchase Online</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        alert("Note for the diagnosis we are using limited symptoms: cold and fever, headache and fever, cough and shortness of breath and unknown condition")
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

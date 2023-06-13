@@ -1,0 +1,75 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header2__title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.form {
+    flex-basis: 100%;
+}
+
+.form h2 {
+    margin: 10px 0px;
+}
+
+.form textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.diagnosis {
+    flex-basis: 45%;
+}
+
+.diagnosis h2,
+.prescription h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.prescription {
+    flex-basis: 45%;
+}
+
+.diagnosis p,
+.prescription p {
+    padding: 20px 0px;
+    font-weight: 700;
+}
+
+@media (max-width:720px) {
+
+    .header2__title {
+        font-size: 1rem;
+    }
+
+    main {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:400px) {
+    .header2__title {
+        font-size: 13px;
+    }
+
+    main {
+        margin-top: 100px;
+    }
+}
